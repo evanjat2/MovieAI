@@ -8,6 +8,6 @@ MovieAI adalah aplikasi berbasis web yang membantu pengguna mencari film yang di
 
 ## 👥 Anggota Kelompok Dindas's Gang
 - [Evan Ananda Jati (20/460543/TK/51132)](https://github.com/evanjat2)
-- [Adinda Luthfiah Sya’bani (20/463587/TK/51579)]
+- [Adinda Luthfiah Sya’bani (20/463587/TK/51579)](https://github.com/adindaluthfiah)
 - [Rizky Intan Nurlita (20/456379/TK/50509)](https://www.github.com/rizkyintan)
 - [Dinda Sabela Rahma Wisista (20/463598/TK/51590)]
