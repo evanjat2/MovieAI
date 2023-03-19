@@ -1,0 +1,5 @@
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+  - jekyll-remote-theme
+title: MovieAI
+description: MovieAI adalah aplikasi berbasis web yang membantu pengguna mencari film yang sesuai preferensi mereka berdasarkan kondisi mood mereka yang mana dapat diketahui dari pengisian mini form dan raut muka yang diambil di awal saat memasuki web. MovieAI akan merekomendasikan beberapa film berdasarkan hasil pemrosesan AI.

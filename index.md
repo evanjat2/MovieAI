@@ -30,20 +30,14 @@ Apakah ekspresi seseorang berpengaruh terhadap mood user?
 
 Merekomendasikan berbagai judul film berdasarkan kondisi emosi atau mood dari pengguna. Nantinya, pengguna akan diminta untuk mengisi beberapa pertanyaan yang disediakan dan apabila berkenan dapat memanfaatkan fitur Face Detector yang tersedia untuk menngkatkan akurasi identifikasi mood sehingga output yang keluar dapat sesuai dengan preferensi mood pengguna.
 
-
-
-<details>
-<h3>Ide Solusi</h3>
-
+## Ide Solusi
 Akan terdapat face recognition beserta beberapa kuis untuk menentukan rekomendasi film yang dapat ditonton.
 
 <img src="docs/assets/img/rancangan-solusi.png" class="img-responsive" alt="rancangan-solusi">
 
-<h3> Analisis Kompetitor </h3>
+## Analisis Kompetitor
 <img src="docs/assets/img/kompetitor1.png" class="img-responsive" alt="kompetitor1">
 <img src="docs/assets/img/kompetitor2.png" class="img-responsive" alt="kompetitor2">
-<img src="docs/assets/img/kompetitor3.png" class="img-responsive" alt="kompetitor3"></details>
-
-<p>Github Page : https://evanjat2.github.io/MovieAI/ </p>
+<img src="docs/assets/img/kompetitor3.png" class="img-responsive" alt="kompetitor3">
 
 
