@@ -18,7 +18,7 @@ export default function Header() {
             Home
           </div>
         </Link>
-        <Link href="/explore">
+        <Link href="/movie-preview">
           <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
             Explore
           </div>
