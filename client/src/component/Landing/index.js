@@ -15,7 +15,7 @@ export default function Landing() {
       </div>
       <div className="flex justify-center gap-16 text-black font-semibold ">
         <div className="bg-gradient-to-tr from-[#E7E0C6] to-[#CE8FFF] p-2 cursor-pointer rounded-xl hover:scale-110 transition duration-500 transition-all ">
-          Use mini quiz
+          Tell me your feeling
         </div>
         <div className="bg-gradient-to-br from-[#E7E0C6] to-[#3C57C4] p-2 cursor-pointer rounded-xl hover:scale-110 transition duration-500 transition-all">
           Use emotion detection

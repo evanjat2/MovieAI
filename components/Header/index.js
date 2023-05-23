@@ -18,18 +18,19 @@ export default function Header() {
             Home
           </div>
         </Link>
-        <Link href="/face-recognition">
+        <Link href="/movie-preview">
           <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
             Face Scan
           </div>
         </Link>
-        <Link href="/explore">
+        <Link href="/face-recognition">
           <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
-            Explore
+            Face Recognition
           </div>
         </Link>
+
         <Link href="/quiz">
-          <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
+          <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">   
             Spill the Tea!
           </div>
         </Link>
