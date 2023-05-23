@@ -7,7 +7,10 @@ export default function quiz() {
         <Header />
         <div className="text-center w-screen min-h-screen content-center grid">
           <p className="font-poppins text-2xl text-center text-white mb-8">
-            What’s your match movies? Find out with our AI!
+            Share your thoughts and feelings
+          </p>
+          <p className="font-poppins text-base text-center text-white mb-8">
+            It helps to figure out what's going on with you right now!
           </p>
           <div className=" transition-all gap-4 grid text-left font-poppins bg-gradient-to-bl from-[#B999ED] to-[#5B9FD9] w-[55vw] min-h-[45vh] m-auto rounded-[45px] p-[22px] mb-8">
             <div class="p-3 relative mb-3" data-te-input-wrapper-init>

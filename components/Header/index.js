@@ -20,7 +20,7 @@ export default function Header() {
         </Link>
         <Link href="/movie-preview">
           <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
-            Explore
+            Face Scan
           </div>
         </Link>
         <Link href="/face-recognition">
@@ -30,8 +30,8 @@ export default function Header() {
         </Link>
 
         <Link href="/quiz">
-          <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">
-            Text to Movie
+          <div className="hover:text-[#E7E0C6] cursor-pointer grid content-center h-full">   
+            Spill the Tea!
           </div>
         </Link>
       </div>
