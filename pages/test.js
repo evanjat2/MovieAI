@@ -1,7 +1,6 @@
 // <environment>
 "use strict";
 import { useEffect } from "react";
-
 import {
   TextAnalysisClient,
   AzureKeyCredential,
@@ -13,8 +12,8 @@ export default function test() {
      ];
 
   async function main() {
-    const endpoint = "https://senprolangserv.cognitiveservices.azure.com/";
-    const apiKey = "9b6dd3495b8042088e552ab519275f1c";
+    const endpoint = process.env.NEXT_PUBLIC_LANGSERVENDPOINT;
+    const apiKey = process.env.NEXT_PUBLIC_LANGSERVAPIKEY1;
     const deploymentName = process.env.NEXT_PUBLIC_LANGSERV_DEPLOYMENTNAME;
     const projectName = process.env.NEXT_PUBLIC_LANGSERV_PROJECTNAME;
     const client = new TextAnalysisClient(
