@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+import Background from "../public/images/background2.png";
+import Cover from "../public/images/cover_preview.png";
+import movie_cover from "../public/images/cover1.png";
+import Up from "../public/images/up-arrow.png";
 
 import { animateScroll as scroll } from "react-scroll";
-
-import Header from "../component/Header";
-
-import Background from "../assets/images/background.png";
-import Cover from "../assets/images/cover.png";
-import Up from "../assets/images/up-arrow.png";
-import Footer from "../component/Footer";
 
 export default function ExplorePage() {
   const [movies, setMovies] = useState();
@@ -46,39 +48,37 @@ export default function ExplorePage() {
   return (
     <>
       <div className="min-h-screen font-poppins text-white overflow-hidden">
+        {/* untuk background */}
         <Header />
         <div className="absolute top-0 -z-10">
-          <img src={Background}></img>
+          <Image src={Background} />
         </div>
         <div className="absolute -top-20 -z-20">
-          <img src={Cover}></img>
+          <Image src={Cover} />
         </div>
         <div className="bg-black fixed w-screen h-screen -z-30"></div>
 
         <div className="pl-[60px] ">
-          <div className="mt-[40vh]">MOVIES</div>
-          <div className="flex gap-12 overflow-x-scroll scrollbar-hide">
-            {movies?.map((l) => (
-              <div key={l.id} className="flex-none w-[126px]">
-                <div className="w-[126px] h-[200px]">
-                  <img
-                    alt="img-movie"
-                    className="w-full"
-                    src={l.primaryImage?.url}
-                  ></img>
-                </div>
-                <div className="font-bold">{l.titleText.text}</div>
-                <div className="font-bold text-[#AFAFAF]">
-                  {l.releaseYear?.year}
-                </div>
-              </div>
-            ))}
+          <div className="grid" style={{ gridTemplateColumns: "400px 800px" }}>
+            <div className="scale-75 pt-[50px]">
+              <Image src={movie_cover} />
+            </div>
+            <div className="width-[700px] pt-[120px] pr-[100px] font-bold text-4xl">
+              MOVIE TITLE
+            </div>
           </div>
-          <div className="mt-[10vh]">SERIES</div>
+
+          <div className="flex gap-12 overflow-x-scroll scrollbar-hide"></div>
+          <div className="mt-[10vh]">RECCOMENDED FOR YOU</div>
           <div className="flex gap-12 overflow-x-scroll scrollbar-hide">
             {series?.map((l) => (
               <div key={l.id} className="flex-none w-[126px]">
                 <div className="w-[126px] h-[200px]">
+                  {/* <Image
+                    alt="img-movie"
+                    className="w-full"
+                    src={l.primaryImage?.url}
+                  /> */}
                   <img
                     alt="img-movie"
                     className="w-full"
@@ -93,14 +93,16 @@ export default function ExplorePage() {
             ))}
           </div>
         </div>
+
         <div className="fixed bottom-10 right-5 animate-bounce">
-          <img
+          <Image
+            alt="scroll-button"
             src={Up}
-            onClick={scroll.scrollToTop}
             className="cursor-pointer"
-          ></img>
+            onClick={scroll.scrollToTop}
+          />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

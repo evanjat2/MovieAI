@@ -6,23 +6,24 @@ import Link from "next/link";
 export default function Landing() {
   return (
     <div className="h-[91vh] grid content-center gap-12 text-white font-poppins w-full text-center">
-      <div className="font-bold text-lg">
+      <div className="text-3xl ">
         <div> AI-POWERED</div>
         <div> MOVIE RECOMENDATIONS </div>
       </div>
-      <div>
+      <div className="text-xl">
         <div>"Let AI be your movie matchmaker - Discover your</div>
         <div> perfect movie match with ease!"</div>
       </div>
       <div className="flex justify-center gap-16 text-black font-semibold ">
         <Link href="/quiz">
           <div className="bg-gradient-to-tr from-[#E7E0C6] to-[#CE8FFF] p-2 cursor-pointer rounded-xl hover:scale-110 transition duration-500 transition-all ">
-            Use mini quiz
+            Spill the Tea!
           </div>
+          f
         </Link>
         <Link href="/face-recognition">
           <div className="bg-gradient-to-br from-[#E7E0C6] to-[#3C57C4] p-2 cursor-pointer rounded-xl hover:scale-110 transition duration-500 transition-all">
-            Use emotion detection
+            Face Scan
           </div>
         </Link>
       </div>

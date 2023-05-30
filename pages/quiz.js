@@ -7,14 +7,23 @@ export default function quiz() {
         <Header />
         <div className="text-center w-screen min-h-screen content-center grid">
           <p className="font-poppins text-2xl text-center text-white mb-8">
-            What’s your match movies? Find out with our mini quiz!
+            Share your thoughts and feelings
           </p>
-          <div className=" transition-all gap-4 grid text-left font-poppins bg-gradient-to-bl from-[#B999ED] to-[#5B9FD9] w-[55vw] min-h-[55vh] m-auto rounded-[45px] p-[22px]">
-            <p className="rounded-[45px] bg-white p-2">Question</p>
-            <p className="rounded-[45px] bg-white p-2 mt-4 cursor-pointer hover:scale-105 transition duration-500 ">Answer 1</p>
-            <p className="rounded-[45px] bg-white p-2 cursor-pointer hover:scale-105 transition duration-500 ">Answer 2</p>
-            <p className="rounded-[45px] bg-white p-2 cursor-pointer hover:scale-105 transition duration-500 ">Answer 3</p>
-            <p className="rounded-[45px] bg-white p-2 cursor-pointer hover:scale-105 transition duration-500 ">Answer 4</p>
+          <p className="font-poppins text-base text-center text-white mb-8">
+            It helps to figure out what's going on with you right now!
+          </p>
+          <div className=" transition-all gap-4 grid text-left font-poppins bg-gradient-to-bl from-[#B999ED] to-[#5B9FD9] w-[55vw] min-h-[45vh] m-auto rounded-[45px] p-[22px] mb-8">
+            <div class="p-3 relative mb-3" data-te-input-wrapper-init>
+              <textarea
+                class="py-3 textarjustify-center peer block resize-none min-h-[auto] w-full rounded-[30px] outline-none border-0 bg-white px-3 leading-[1.6] transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-grey dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-50"
+                id="exampleFormControlTextarea1"
+                rows="10"
+                placeholder="Write your feelings here..."
+              ></textarea>
+            </div>
+          </div>
+          <div className="bg-white w-[55vw] bg-gradient-to-b from-[#E7E0C6] to-[#ACBCFF] m-auto rounded-[45px] p-2 font-bold cursor-pointer hover:scale-105 transition duration-500">
+            SUBMIT
           </div>
         </div>
       </div>
