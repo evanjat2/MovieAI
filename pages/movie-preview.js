@@ -65,6 +65,26 @@ export default function ExplorePage() {
             </div>
             <div className="width-[700px] pt-[120px] pr-[100px] font-bold text-4xl">
               MOVIE TITLE
+              <div className="text-[20px] mt-3 font-thin">
+                4 season 8 episode
+              </div>
+              <p className="mt-3 pr-[300px] font-thin text-[12px] leading-5">
+                Baseada no livro best-seller de Julia Quinn, Bridgerton mergulha
+                no mundo sensual, luxuoso e competitivo da alta sociedade
+                londrina do início do século 19. Não bastasse o fato de ambos
+                agirem como se não estivessem interessados um pelo outro, um
+                escândalo preparado por Lady Whistledown (na voz de Julie
+                Andrews) faz com que o nome de Daphne seja manchado. Para se
+                defender das calúnias, ela decide se aliar ao rebelde duque,
+                colocando à prova os valores e as aparências da elite de
+                Londres.
+              </p>
+              <p className="font-bold mt-6 pr-[300px] text-[12px] leading-5">
+                Starring:{" "}
+              </p>
+              <p className="font-bold mt-2 pr-[300px] text-[12px] leading-5">
+                Genre:
+              </p>
             </div>
           </div>
 
