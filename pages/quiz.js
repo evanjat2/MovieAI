@@ -9,15 +9,15 @@ import {
 
 export default function quiz() {
   const router = useRouter();
-  
+
   const [story, setStory] = useState([]);
   const [loading, setLoading] = useState(false);
   async function CustomSingleLabelClassification(story) {
     setLoading(true);
-    console.log(story)
-    if (story.length == 0){
-      console.log("KOSONGG")
-      return
+    console.log(story);
+    if (story.length == 0) {
+      console.log("KOSONGG");
+      return;
     }
     const documents = [story];
     const endpoint = process.env.NEXT_PUBLIC_LANGSERVENDPOINT;
@@ -58,7 +58,7 @@ export default function quiz() {
       }
     }
     setLoading(false);
-    router.push("/")
+    router.push("/");
   }
 
   const getEmotion = () => {
@@ -77,7 +77,6 @@ export default function quiz() {
 
   return (
     <div>
-
       <div className="min-h-screen bg-gradient-to-b from-[#1E2A5E] to-[#000000]">
         <Header />
         <div className="text-center w-screen min-h-screen content-center grid font-poppins">
