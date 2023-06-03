@@ -49,10 +49,10 @@ export default function ExplorePage() {
       <div className="min-h-screen font-poppins text-white overflow-hidden">
         <Header />
         <div className="absolute top-0 -z-10">
-          <Image src={Background} />
+          <Image src={Background} alt="background" />
         </div>
         <div className="absolute -top-20 -z-20">
-          <Image src={Cover} />
+          <Image src={Cover} alt="cover"/>
         </div>
         <div className="bg-black fixed w-screen h-screen -z-30"></div>
 
@@ -62,11 +62,6 @@ export default function ExplorePage() {
             {movies?.map((l) => (
               <div key={l.id} className="flex-none w-[126px]">
                 <div className="w-[126px] h-[200px]">
-                  {/* <Image
-                    alt="img-movie"
-                    className="w-full"
-                    src={l.primaryImage?.url}
-                  /> */}
                   <img
                     alt="img-movie"
                     className="w-full"
