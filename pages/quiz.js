@@ -1,16 +1,24 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   TextAnalysisClient,
   AzureKeyCredential,
 } from "@azure/ai-text-analytics";
 
 export default function quiz() {
+  const router = useRouter();
+  
   const [story, setStory] = useState([]);
   const [loading, setLoading] = useState(false);
   async function CustomSingleLabelClassification(story) {
     setLoading(true);
+    console.log(story)
+    if (story.length == 0){
+      console.log("KOSONGG")
+      return
+    }
     const documents = [story];
     const endpoint = process.env.NEXT_PUBLIC_LANGSERVENDPOINT;
     const apiKey = process.env.NEXT_PUBLIC_LANGSERVAPIKEY1;
@@ -48,9 +56,9 @@ export default function quiz() {
         }
         console.log(`\tClassification: ${result.classifications[0].category}`);
       }
-
     }
     setLoading(false);
+    router.push("/")
   }
 
   const getEmotion = () => {
@@ -65,14 +73,14 @@ export default function quiz() {
 
   useEffect(() => {
     console.log(loading);
-  }, [loading])
-  
+  }, [loading]);
 
   return (
     <div>
+
       <div className="min-h-screen bg-gradient-to-b from-[#1E2A5E] to-[#000000]">
         <Header />
-        <div className="text-center w-screen min-h-screen content-center grid">
+        <div className="text-center w-screen min-h-screen content-center grid font-poppins">
           <p className="font-poppins text-2xl text-center text-white mb-8">
             Share your thoughts and feelings
           </p>
