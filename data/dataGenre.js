@@ -1,0 +1,78 @@
+const dataGenre = [
+  {
+    id: "joy",
+    count: 10,
+    genre: [
+      "Musical",
+      "Animation",
+      "Music",
+      "Family",
+      "Romance",
+      "Biography",
+      "Sport",
+      "Comedy",
+      "Fantasy",
+      "Adventure",
+    ],
+  },
+  {
+    id: "fear",
+    count: 10,
+    genre: [
+      "Horror",
+      "Sci-Fi",
+      "Thriller",
+      "Mystery",
+      "War",
+      "Action",
+      "Crime",
+      "Fantasy",
+      "Adventure",
+      "Western",
+    ],
+  },
+  {
+    id: "sadness",
+    count: 10,
+    genre: [
+      "Mystery",
+      "Thriller",
+      "War",
+      "Drama",
+      "Horror",
+      "Crime",
+      "Western",
+      "History",
+      "Romance",
+      "Action",
+    ],
+  },
+  {
+    id: "surprise",
+    count: 6,
+    genre: ["Thriller", "Horror", "Drama", "Sci-Fi", "Adventure", "Crime"],
+  },
+  {
+    id: "love",
+    count: 6,
+    genre: ["Romance", "Drama", "Adult", "Comedy", "War", "History"],
+  },
+
+  {
+    id: "anger",
+    count: 10,
+    genre: [
+      "Western",
+      "Crime",
+      "Action",
+      "War",
+      "Sci-Fi",
+      "Thriller",
+      "Adventure",
+      "Horror",
+      "Mystery",
+      "History",
+    ],
+  },
+];
+export { dataGenre };
