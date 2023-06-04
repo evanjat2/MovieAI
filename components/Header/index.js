@@ -14,23 +14,23 @@ export default function Header() {
       </div>
       <div className="flex w-[40%] justify-around font-bold text-white align-middle">
         <Link href="/">
-          <div className="hover:text-[#07ffff] cursor-pointer grid content-center h-full">
+          <div className="hover:text-[#87ffff] hover:scale-110 transition cursor-pointer grid content-center h-full">
             Home
           </div>
         </Link>
         <Link href="/explore">
-          <div className="hover:text-[#07ffff] cursor-pointer grid content-center h-full">
+          <div className="hover:text-[#87ffff] hover:scale-110 transition cursor-pointer grid content-center h-full">
             Explore
           </div>
         </Link>
         <Link href="/face-recognition">
-          <div className="hover:text-[#07ffff] cursor-pointer grid content-center h-full">
+          <div className="hover:text-[#87ffff] hover:scale-110 transition cursor-pointer grid content-center h-full">
             Face Recognition
           </div>
         </Link>
 
         <Link href="/quiz">
-          <div className="hover:text-[#07ffff] cursor-pointer grid content-center h-full">
+          <div className="hover:text-[#87ffff] hover:scale-110 transition cursor-pointer grid content-center h-full">
             Spill the Tea!
           </div>
         </Link>
