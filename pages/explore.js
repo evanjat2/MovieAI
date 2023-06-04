@@ -45,7 +45,7 @@ export default function ExplorePage() {
     fetch(
       "https://moviesdatabase.p.rapidapi.com/titles/search/title/" +
         searchQuery +
-        "?exact=false&endYear=2023",
+        "?exact=false&endYear=2023&limit=30&sort=year.decr",
       options
     )
       .then((response) => response.json())
