@@ -14,6 +14,7 @@ import { animateScroll as scroll } from "react-scroll";
 export default function ExplorePage() {
   const [movies, setMovies] = useState();
   const [series, setSeries] = useState();
+  const [thisMovies, setThisMovies] = useState();
 
   useEffect(() => {
     const options = {

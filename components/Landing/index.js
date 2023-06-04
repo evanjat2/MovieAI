@@ -8,7 +8,7 @@ export default function Landing() {
     <div className="h-[91vh] grid content-center gap-12 text-white font-poppins w-full text-center">
       <div className="text-3xl ">
         <div> AI-POWERED</div>
-        <div> MOVIE RECOMENDATIONS </div>
+        <div> MOVIE RECOMMENDATIONS </div>
       </div>
       <div className="text-xl">
         <div>"Let AI be your movie matchmaker - Discover your</div>
