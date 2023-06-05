@@ -2,6 +2,7 @@ import { useEffect, useContext, useState } from "react";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import axios from "axios";
 
@@ -32,23 +33,25 @@ export default function result() {
           </p>
           {movie?.map((list) => (
             <>
-              <div className="w-full pb-[5vh]" key={list._id}>
-                <div className="flex gap-12 w-full">
-                  <div className="w-[33%] shrink-0">
-                    <img
-                      alt="image-movie"
-                      src={list.primaryImage?.url}
-                      className="w-[80%]"
-                    ></img>
+              <Link key={list.id} href={`/preview/${list?.id}`}>
+                <div className="w-full pb-[5vh]">
+                  <div className="flex gap-12 w-full">
+                    <div className="w-[33%] shrink-0">
+                      <img
+                        alt="image-movie"
+                        src={list.primaryImage?.url}
+                        className="w-[80%]"
+                      ></img>
+                    </div>
+                    <div className="text-justify">
+                      <p className="pb-8 font-bold">{list.titleText.text}</p>
+                      <p>{list.plot.plotText.plainText}</p>
+                      <div></div>
+                    </div>
                   </div>
-                  <div className="text-justify">
-                    <p className="pb-8 font-bold">{list.titleText.text}</p>
-                    <p>{list.plot.plotText.plainText}</p>
-                    <div></div>
-                  </div>
+                  <div></div>
                 </div>
-                <div></div>
-              </div>
+              </Link>
             </>
           ))}
         </div>
