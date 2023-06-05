@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
-
 import axios from "axios";
+
 import { dataGenre } from "../data/dataGenre";
 
 const AppContext = React.createContext([{}, () => {}]);
 
 const AppContextProvider = (props) => {
   const getGenre = (mood) => {
+    if(mood == "senang"){
+      mood = "joy";
+    }
+    if(mood == "sedih"){
+      mood = "sadness";
+    }
     const filteredGenre = dataGenre.filter((data) => data.id == mood);
     const randomNumber = Math.floor(Math.random() * 4);
     const randGenre = filteredGenre[0]?.genre[randomNumber];
