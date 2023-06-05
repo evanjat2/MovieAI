@@ -74,7 +74,6 @@ export default function moviePreview() {
     <>
       <div className="min-h-screen font-poppins overflow-hidden text-white relative">
         <div className="absolute h-full w-full bg-black -z-20"></div>
-        {/* {thisMovie?.originalTitleText.text} */}
         {/* untuk background */}
         <Header />
         <div className="absolute top-0 -z-10">
@@ -90,8 +89,8 @@ export default function moviePreview() {
             </div>
             <div className="width-[700px] pt-[120px] pr-[100px] font-bold text-4xl">
               {thisMovie?.originalTitleText.text}
-              <p className="mt-3 pr-[300px] font-thin text-[12px] leading-5">
-                {thisMovie?.plot.plotText.plainText}
+              <p className="mt-3 pr-[300px] font-thin text-[16px] leading-5">
+                {thisMovie?.plot?.plotText.plainText}
               </p>
               <p className="font-bold mt-6 text-[12px] leading-5">
                 Starring:{" "}
@@ -100,7 +99,7 @@ export default function moviePreview() {
                 Genres:
                 {thisMovie?.genres.genres.map((l) => (
                   <>
-                    <div className="px-2 bg-blue-300 w-fit" key={l.tex}>
+                    <div className="px-2 w-fit text-[20px]" key={l.tex}>
                       {l.text}
                     </div>
                   </>
@@ -125,7 +124,6 @@ export default function moviePreview() {
                   <div className="font-bold">{l.titleText.text}</div>
                   <div className="font-bold text-[#AFAFAF]">
                     {l.releaseYear?.year}
-                    {l?.id}
                   </div>
                 </div>
               </Link>
