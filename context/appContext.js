@@ -6,11 +6,11 @@ import { dataGenre } from "../data/dataGenre";
 const AppContext = React.createContext([{}, () => {}]);
 
 const AppContextProvider = (props) => {
-  const getGenre = (mood) => {
-    if(mood == "senang"){
+  const getGenre = async (mood) => {
+    if (mood == "senang") {
       mood = "joy";
     }
-    if(mood == "sedih"){
+    if (mood == "sedih") {
       mood = "sadness";
     }
     const filteredGenre = dataGenre.filter((data) => data.id == mood);
@@ -18,7 +18,7 @@ const AppContextProvider = (props) => {
     const randGenre = filteredGenre[0]?.genre[randomNumber];
     console.log("Genre yang didapat = ", randGenre);
     localStorage.setItem("myGenre", JSON.stringify(randGenre));
-    fetchMovies(randGenre, "3");
+    await fetchMovies(randGenre, "3");
   };
 
   const fetchMovies = async (genre, limit) => {
@@ -39,21 +39,22 @@ const AppContextProvider = (props) => {
 
     try {
       const response = await axios.request(options);
-      // console.log(response.data.results);
       localStorage.setItem("myMovie", JSON.stringify(response.data.results));
-      checkMovies();
+      console.log("dapet movies", response.data.results)
+      await checkMovies();
     } catch (error) {
       console.error(error);
     }
   };
 
-  function checkMovies() {
+  const checkMovies = async () => {
     const movies = JSON.parse(localStorage.getItem("myMovie"));
     const mood = JSON.parse(localStorage.getItem("myMood"));
     if (movies?.length == 0) {
+      console.log("Nggak aman")
       getGenre(mood);
     }
-  }
+  };
 
   return (
     <AppContext.Provider value={{ getGenre }}>

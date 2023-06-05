@@ -51,7 +51,7 @@ export default function quiz() {
         const { code, message } = actionResult.error;
         throw new Error(`Unexpected error (${code}): ${message}`);
       }
-      for (const result of actionResult.results) {
+      for await (const result of actionResult.results) {
         console.log(`- Document ${result.id}`);
         if (result.error) {
           const { code, message } = result.error;
@@ -60,10 +60,11 @@ export default function quiz() {
         const mood = result.classifications[0].category;
         console.log(`\tClassification: ${mood}`);
         localStorage.setItem("myMood", JSON.stringify(mood));
-        getGenre(mood);
+        await getGenre(mood);
       }
     }
     setLoading(false);
+    console.log(JSON.parse(localStorage.getItem("myMovie")))
     router.push({
       pathname: "/result",
     });

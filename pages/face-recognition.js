@@ -52,7 +52,7 @@ export default function faceRecognition() {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     })
-      .then(function (response) {
+      .then(async function (response) {
         console.log(response.data.top);
         let tempMood = response.data.top;
         if (tempMood == "senang") {
@@ -65,7 +65,7 @@ export default function faceRecognition() {
         }
         localStorage.setItem("myMood", JSON.stringify(tempMood));
         setMood(tempMood);
-        getGenre(tempMood);
+        await getGenre(tempMood);
         setLoading(false);
       })
       .catch(function (error) {
