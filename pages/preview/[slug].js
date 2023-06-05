@@ -90,7 +90,7 @@ export default function moviePreview() {
             <div className="width-[700px] pt-[120px] pr-[100px] font-bold text-4xl">
               {thisMovie?.originalTitleText.text}
               <p className="mt-3 pr-[300px] font-thin text-[16px] leading-5">
-                {thisMovie?.plot.plotText.plainText}
+                {thisMovie?.plot?.plotText.plainText}
               </p>
               <p className="font-bold mt-6 text-[12px] leading-5">
                 Starring:{" "}
