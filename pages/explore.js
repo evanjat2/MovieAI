@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -83,19 +84,21 @@ export default function ExplorePage() {
               {search
                 ?.filter((l) => l.primaryImage?.url)
                 .map((l) => (
-                  <div key={l.id} className="flex-none w-[126px]">
-                    <div className="w-[126px] h-[200px]">
-                      <img
-                        alt="img-movie"
-                        className="w-full"
-                        src={l.primaryImage?.url}
-                      ></img>
+                  <Link key={l.id} href={`/preview/${l?.id}`}>
+                    <div className="flex-none w-[126px]">
+                      <div className="w-[126px] h-[200px]">
+                        <img
+                          alt="img-movie"
+                          className="w-full"
+                          src={l.primaryImage?.url}
+                        ></img>
+                      </div>
+                      <div className="font-bold">{l.titleText.text}</div>
+                      <div className="font-bold text-[#AFAFAF] mb-[50px]">
+                        {l.releaseYear?.year}
+                      </div>
                     </div>
-                    <div className="font-bold">{l.titleText.text}</div>
-                    <div className="font-bold text-[#AFAFAF] mb-[50px]">
-                      {l.releaseYear?.year}
-                    </div>
-                  </div>
+                  </Link>
                 ))}
             </div>
           </div>
@@ -133,19 +136,21 @@ export default function ExplorePage() {
               {movies
                 ?.filter((l) => l.primaryImage?.url)
                 .map((l) => (
-                  <div key={l.id} className="flex-none w-[126px]">
-                    <div className="w-[126px] h-[200px]">
-                      <img
-                        alt="img-movie"
-                        className="w-full"
-                        src={l.primaryImage?.url}
-                      ></img>
+                  <Link key={l.id} href={`/preview/${l?.id}`}>
+                    <div className="flex-none w-[126px]">
+                      <div className="w-[126px] h-[200px]">
+                        <img
+                          alt="img-movie"
+                          className="w-full"
+                          src={l.primaryImage?.url}
+                        ></img>
+                      </div>
+                      <div className="font-bold">{l.titleText.text}</div>
+                      <div className="font-bold text-[#AFAFAF]">
+                        {l.releaseYear?.year}
+                      </div>
                     </div>
-                    <div className="font-bold">{l.titleText.text}</div>
-                    <div className="font-bold text-[#AFAFAF]">
-                      {l.releaseYear?.year}
-                    </div>
-                  </div>
+                  </Link>
                 ))}
             </div>
 
@@ -156,7 +161,8 @@ export default function ExplorePage() {
               {series
                 ?.filter((l) => l.primaryImage?.url)
                 .map((l) => (
-                  <div key={l.id} className="flex-none w-[126px]">
+                  <Link key={l.id} href={`/preview/${l?.id}`}>
+                  <div className="flex-none w-[126px]">
                     <div className="w-[126px] h-[200px]">
                       <img
                         alt="img-movie"
@@ -168,7 +174,7 @@ export default function ExplorePage() {
                     <div className="font-bold text-[#AFAFAF]">
                       {l.releaseYear?.year}
                     </div>
-                  </div>
+                  </div></Link>
                 ))}
             </div>
           </div>
