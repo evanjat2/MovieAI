@@ -28,7 +28,7 @@ export default function result() {
   },[])
   return (
     <>
-      <div className="bg-gradient-to-b from-[#1E2A5E] to-[#172048] min-h-screen text-white">
+      <div className="bg-gradient-to-b from-[#1E2A5E] to-[#000000] min-h-screen text-white">
         <Header />
         {movie && (
           <div className="font-poppins text-center px-[20%] pt-8 w-full">
