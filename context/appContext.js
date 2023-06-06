@@ -29,7 +29,7 @@ const AppContextProvider = (props) => {
         genre: genre,
         limit: limit,
         info: "base_info",
-        list: "most_pop_movies",
+        list: "top_rated_250",
       },
       headers: {
         "X-RapidAPI-Key": "eda9cc6761mshd604525a311e726p148243jsn27632d2bc44d",
