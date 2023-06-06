@@ -92,14 +92,11 @@ export default function moviePreview() {
               <p className="mt-3 pr-[300px] font-thin text-[16px] leading-5">
                 {thisMovie?.plot?.plotText.plainText}
               </p>
-              <p className="font-bold mt-6 text-[12px] leading-5">
-                Starring:{" "}
-              </p>
-              <div className="font-bold mt-2 text-[12px] leading-5 flex gap-2">
-                Genres:
+              <div className="font-bold mt-2 text-[12px] leading-5 flex gap-2 text-[16px]">
+                Genres
                 {thisMovie?.genres.genres.map((l) => (
                   <>
-                    <div className="px-2 w-fit text-[20px]" key={l.tex}>
+                    <div className="px-2 w-fit text-[16px]" key={l.text}>
                       {l.text}
                     </div>
                   </>
